@@ -13,7 +13,7 @@ $apellido = $_GET['descripcion'];
 $email = $_GET['cantidad'];
 $telefono = $_GET['pais'];
 $contra = $_GET['cc'];
-$total = $nombre.", ".$descripcion.", ".$cantidad.", ".$pais.", ".$cc."'";
+$total = "'".$nombre."','".$descripcion."','".$cantidad."','".$pais."','".$cc."'";
 $querycont = pg_query($conexion, "INSERT INTO reporte(nombre,descripcion,cantidad,pais,cc) VALUES (".$total.");");
 
 pg_close($conexion);
