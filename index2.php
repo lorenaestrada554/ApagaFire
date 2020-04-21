@@ -9,10 +9,10 @@ $conexion = pg_connect("host='ec2-18-210-51-239.compute-1.amazonaws.com' dbname=
 
 
 $nombre = $_POST['nombre'];
-$apellido = $_POST['descripcion'];
-$email = $_POST['cantidad'];
-$telefono = $_POST['pais'];
-$contra = $_POST['cc'];
+$descripcion = $_POST['descripcion'];
+$cantidad = $_POST['cantidad'];
+$pais = $_POST['pais'];
+$cc = $_POST['cc'];
 $total = "'".$nombre."','".$descripcion."','".$cantidad."','".$pais."','".$cc."'";
 $querycont = pg_query($conexion, "INSERT INTO reporte(nombre,descripcion,cantidad,pais,cc) VALUES (".$total.");");
 
